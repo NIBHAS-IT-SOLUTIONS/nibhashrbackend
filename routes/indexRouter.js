@@ -9,7 +9,9 @@ const applicationcontrollers = require('../controllers/applicationcontrollers');
 const vacancycontrollers = require('../controllers/vacancycontrollers');
 
 
+
 router.post('/',servicecontrollers.service)
+
 
 
 router.post('/register',employercontrollers.register)
@@ -28,10 +30,13 @@ router.get('/getjobsbyqual',jobcontrollers.getjobsbyqual)
 router.get('/getlocations',jobcontrollers.getlocations)
 router.get('/getqualifications',jobcontrollers.getqualifications)
 
+
  
 router.post('/candidateregister',candidatecontrollers.candidateregister)
 router.post('/candidatelogin',candidatecontrollers.candidatelogin) 
 router.get('/getcandidate/:id',candidatecontrollers.getcandidatebyId)
+
+
 
 router.post('/applyjobs',applicationcontrollers.applyjobs)
 router.get('/appliedjobs',applicationcontrollers.appliedjobs)
@@ -44,8 +49,12 @@ router.get('/getvacancybyid/:id',vacancycontrollers.getvacancybyId)
 router.patch('/updatevacancy/:id',vacancycontrollers.updatevacancy)
 router.delete('/deletevacancy/:id',vacancycontrollers.deleteVacancy) 
 
+
+
 router.post('/applyvacancy',vacancycontrollers.applyvacancy)
 router.get('/appliedvacancies',vacancycontrollers.appliedvacancies)
+
+
 
 router.post('/searchbyjob',vacancycontrollers.searchbyjob)
 router.post('/filterjobs',vacancycontrollers.filterjobs)
